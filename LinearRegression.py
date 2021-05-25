@@ -5,14 +5,18 @@ import numpy as np
 
 data = pd.read_csv("day.csv")
 
-data = data[["season", "yr", "holiday", "weekday", "workingday", "temp", "windspeed", "cnt"]]
+data = data[
+    ["season", "yr", "holiday", "weekday", "workingday", "temp", "windspeed", "cnt"]
+]
 
 pred = "cnt"
 
 x = np.array(data.drop(["cnt"], 1))
 y = np.array(data[pred])
 
-x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size=0.1)
+x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(
+    x, y, test_size=0.1
+)
 
 model = linear_model.LinearRegression()
 
