@@ -1,5 +1,5 @@
 # MachineLearning
-Machine Learning in Python - Linear Regression
+Machine Learning in Python using Linear Regression
 
 Made in PyCharm with Sklearn
 
